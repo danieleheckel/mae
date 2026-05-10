@@ -1,0 +1,76 @@
+@font-face {
+    font-family: '1';
+    src: url('/la_monarchie_de_saint_ombre/La\ Monarchie\ de\ Saint\ Ombre.ttf');
+    font-weight: normal;
+      
+    font-style: normal;
+}
+
+body {
+    margin: 0%;
+    font-family: "1";
+    background-color: #f7f0f8;
+    text-align: center;
+    letter-spacing: 4px;
+    font-size: 130%;
+    border-left: 10px solid #7d2e6e;
+    border-right: 10px solid #7d2e6e;
+}
+
+h1 {
+    color: #7d2e6e;
+}
+
+.formulario {
+    margin: 20px;
+}
+
+input, textarea {
+    display: block;
+    margin: 10px auto;
+    padding: 8px;
+    width: 250px;
+}
+
+button {
+    padding: 10px;
+    background-color: #7d2e6e;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    font-family: 'Courier New', monospace;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card button {
+    margin-top: 10px;
+    background-color: #c62828;
+    color: white;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.card button:hover {
+    background-color: #b71c1c;
+}
