@@ -117,6 +117,24 @@ button:active {
   transform: scale(0.98);
 }
 
+.acoes-form {
+  display: flex;
+  gap: 12px;
+}
+
+.acoes-form button {
+  flex: 1;
+}
+
+.oculto {
+  display: none !important;
+}
+
+.aviso-imagem {
+  color: #6c5b6a;
+  font-size: 0.85rem;
+}
+
 .catalogo-section h2 {
   margin-bottom: 16px;
   color: var(--roxo);
@@ -143,11 +161,14 @@ button:active {
   flex-direction: column;
 }
 
-.card img {
+/* Tamanho padronizado: qualquer imagem ocupa exatamente esta área */
+.card .card-imagem {
   width: 100%;
   height: 220px;
   object-fit: cover;
+  object-position: center;
   display: block;
+  background: var(--rosa-claro);
 }
 
 .card-conteudo {
@@ -169,12 +190,65 @@ button:active {
   flex: 1;
 }
 
-.card button {
+.card-acoes {
+  display: flex;
+  gap: 8px;
+}
+
+.card-acoes button {
+  flex: 1;
+  padding: 10px 12px;
+  font-size: 0.9rem;
+}
+
+.card .botao-editar {
+  background: var(--roxo);
+}
+
+.card .botao-editar:hover {
+  background: var(--roxo-escuro);
+}
+
+.card .botao-excluir {
   background: var(--vermelho);
 }
 
-.card button:hover {
+.card .botao-excluir:hover {
   background: var(--vermelho-escuro);
+}
+
+/* Paginação */
+.paginacao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.paginacao button {
+  min-width: 42px;
+  padding: 8px 12px;
+  background: var(--branco);
+  color: var(--roxo);
+  border: 1px solid #d9c6d7;
+  font-weight: 700;
+}
+
+.paginacao button:hover:not(:disabled) {
+  background: var(--rosa-claro);
+}
+
+.paginacao button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.paginacao .pagina-atual {
+  background: var(--roxo);
+  color: var(--branco);
+  border-color: var(--roxo);
 }
 
 @media (max-width: 600px) {
@@ -186,7 +260,7 @@ button:active {
     padding: 16px;
   }
 
-  .card img {
+  .card .card-imagem {
     height: 190px;
   }
 }

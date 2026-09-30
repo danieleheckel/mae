@@ -6,6 +6,7 @@
   <title>Catálogo de Plantas</title>
   <link rel="stylesheet" href="inicio.css">
   <link rel="icon" type="image/png" href="/icone.png">
+</head>
 
 <body>
   <main class="container">
@@ -46,11 +47,14 @@
             id="imagem"
             name="imagem"
             accept="image/*"
-            required
           >
+          <small id="aviso-imagem" class="aviso-imagem"></small>
         </div>
 
-        <button type="submit">Adicionar</button>
+        <div class="acoes-form">
+          <button type="submit" id="botao-submit">Adicionar</button>
+          <button type="button" id="botao-cancelar" class="oculto">Cancelar edição</button>
+        </div>
       </form>
     </section>
 
@@ -60,6 +64,7 @@
         Nenhuma planta cadastrada ainda.
       </div>
       <div id="catalogo" class="catalogo"></div>
+      <div id="paginacao" class="paginacao"></div>
     </section>
   </main>
 
